@@ -1,0 +1,62 @@
+{% extends 'base/base.htm' %}
+
+{% load static %}
+{% block body %}
+<div>
+    <!-- Vidéo de fond -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="{% static 'videos/bg1.mp4' %}" type="video/mp4">
+        <!-- Crédit : https://www.freepik.com -->
+    </video>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <h2>Welcome to Zacademy</h2>
+        <p class="lead">Your one-stop solution for all your learning needs.</p>
+        <p class="lead">
+            <a href="#" class="btn btn-light">Register</a>
+        </p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h3>Zacademy</h3>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+</div>
+{% endblock %}
+
+<!-- Footer Section -->
+{% block footer %}
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Accounting</a></li>
+                <li><a href="#">Web Design</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Trainings</h3>
+            <ul>
+                <li><a href="#">Guide et tutorials</a></li>
+                <li><a href="#">Social media</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Discover</h3>
+            <ul>
+                <li><a href="#">Founder</a></li>
+                <li><a href="#">Support Technique</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>©  {% now 'Y' %} Zacademy. All rights reserved. <a href=""> Zacademy</a></p>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,351 @@
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+.h2, h2 {
+    color: white;
+}
+
+.h3, h3 {
+    color: white;
+}
+
+body.index {
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+    max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link+.nav-link {
+    margin-right: 1rem;
+}
+
+.nav-masthead .active {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.main-content {
+    position: absolute;
+    top: 20%; /* Ajustez cette valeur pour positionner le texte plus haut ou plus bas */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1; /* Place le contenu au-dessus de la vidéo */
+}
+
+/* Positionnement de la vidéo de fond */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Place la vidéo en arrière-plan */
+}
+
+/* Conteneur principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    text-align: center;
+    color: white;
+    z-index: 1; /* Place le contenu au-dessus de la vidéo */
+}
+
+/* Style pour le titre et le texte */
+.main-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.main-content .btn-light {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-content .btn-light:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Sépare Zacademy et les liens */
+    align-items: center;
+    padding: 20px;
+    z-index: 2; /* Place le header au-dessus de la vidéo */
+}
+
+header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+header nav {
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(15, 12, 12, 0.7); /* Fond semi-transparent */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 2; /* Place le footer au-dessus de la vidéo */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    color: #f3eded;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+.new-badge {
+    background-color: #ff6b6b; /* Couleur du badge "Nouveau" */
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.bottom-info {
+    margin-bottom: 15px;
+}
+
+.bottom-info h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.bottom-info p {
+    color: #777;
+}
+
+.copyright {
+    color: hs#777;
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    }
+
+    .footer-bottom {
+        text-align: left;
+    }
+}
+
+.logo-social .logo a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #555;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #007bff; /* Couleur au survol - à personnaliser */
+    color: #fff;
+}
+
+.fa-twitter::before { content: "\f099"; }
+.fa-linkedin-in::before { content: "\f0e1"; }
+.fa-globe::before { content: "\f0ac"; }
+.fa-code::before { content: "\f121"; } /* Exemple d'icône créative */
+
+/* Bouton Register */
+.btn-light {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #007bff;
+    color: white;
+}
